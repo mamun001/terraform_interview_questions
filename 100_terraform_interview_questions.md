@@ -2,11 +2,10 @@
 
 # ................... 100 Terraform Interview Questions  ....................
 
-## ......................       Mamun Rashid  .....................
+## By  Mamun Rashid :: https://www.linkedin.com/in/mamunrashid/
 
-###                                          Last Updated: 2021.03.03
+### Last Updated: 2021.03.03
 
-###                                   https://www.linkedin.com/in/mamunrashid/
 
 
   ( I also have 275 Multiple Choice Questions for Hashicorp Terraform Associate Certification Exam at:
