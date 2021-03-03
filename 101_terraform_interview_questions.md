@@ -11,8 +11,8 @@
 *  ( I also have 275 Multiple Choice Questions for Hashicorp Terraform Associate Certification Exam found at the link below:
 *    https://testmoz.com/1245195 )
 
-*  ( Mr. Bachina has also made an execllent set, which is very effective, as well found at the link below:
-*    here: https://medium.com/bb-tutorials-and-thoughts/250-practice-questions-for-terraform-associate-certification-7a3ccebe6a1a )
+*  ( Mr. Bachina has also made an execllent set, which is very effective, as well. That can be found at the link below:
+*    https://medium.com/bb-tutorials-and-thoughts/250-practice-questions-for-terraform-associate-certification-7a3ccebe6a1a )
 
 ##
 ##
