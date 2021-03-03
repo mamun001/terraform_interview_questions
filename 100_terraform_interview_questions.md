@@ -36,12 +36,16 @@
            If it was done via Terraform code, git repo AND AWS Cloudtrail can tell you.
 
 
+##
+##
 3. You made a module. One Terraform code uses that module. But, now, you improved that module, but the "caller" code is not compatible with the new version of the module. 
    How can you have both versions of the module in use?
 
    Answer: You can have verions on your modules and the caller code can refer to specific version of the module.
 
 
+##
+##
 4. You have existing infrastructure in AWS that was NOT made by Terraform. How can you bring that infrastructure in Terraform code's control?
 
    Answer: If you all want is the "state" to be in Terraform, you can use "terraform import" commnad.
