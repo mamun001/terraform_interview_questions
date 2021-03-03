@@ -4,7 +4,11 @@
 
 ##                                               Mamun Rashid
 
-![](https://twitter.com/mamunr7/photo) 
+#![](https://twitter.com/mamunr7/photo) 
+
+<img src="https://avatars.githubusercontent.com/u/12315197?s=460&v=4"
+     alt="Markdown Monster icon"
+     style="float: left; margin-right: 10px;" />
 
 ###                                          Last Updated: 2021.03.03
 
