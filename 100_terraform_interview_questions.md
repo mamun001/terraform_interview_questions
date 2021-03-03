@@ -16,12 +16,12 @@
 
 ##
 ##
-##
 
 #### 1. Imagine that there are 20 people in the company who use Terraform that manages resources in AWS or GCP. How can you set up a system that tackles that? What could be the issues that can arise from this?
 
 
-#####   Answer: At least two issues arise when multiple people work on Terraform together touching the same resources:
+#####   Answer: 
+#####   At least two issues arise when multiple people work on Terraform together touching the same resources:
 #####          1. state file overrides
 #####           2. code overrides
 #####
