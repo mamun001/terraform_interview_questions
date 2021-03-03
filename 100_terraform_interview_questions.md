@@ -1,6 +1,6 @@
 
 
-#   <center> 100 Terraform Interview Questions </center>                                    
+   <center> 100 Terraform Interview Questions </center>                                    
 
 ##                                               Mamun Rashid
 
