@@ -5,17 +5,16 @@
 ## By  Mamun Rashid :: https://www.linkedin.com/in/mamunrashid/
 
 ### Last Updated: 2021.03.03
+###
+###
 
-
-
-  ( I also have 275 Multiple Choice Questions for Hashicorp Terraform Associate Certification Exam at:
+*  ( I also have 275 Multiple Choice Questions for Hashicorp Terraform Associate Certification Exam at:
     https://testmoz.com/1245195 )
 
-  ( Mr. Bachina has also made an execllent set. That is very effective, as well found here:
-    https://medium.com/bb-tutorials-and-thoughts/250-practice-questions-for-terraform-associate-certification-7a3ccebe6a1a )
+*  ( Mr. Bachina has also made an execllent set, which is very effective, as well found here: https://medium.com/bb-tutorials-and-thoughts/250-practice-questions-for-terraform-associate-certification-7a3ccebe6a1a )
 
 
-1. Imagine that there are 20 people in the company who use Terraform that manages resources in AWS or GCP. 
+### 1. Imagine that there are 20 people in the company who use Terraform that manages resources in AWS or GCP. 
    How can you set up a system that tackles that? What could be the issues that can arise from this?
 
 
