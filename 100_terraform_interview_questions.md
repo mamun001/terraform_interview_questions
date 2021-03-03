@@ -14,7 +14,8 @@
 *  ( Mr. Bachina has also made an execllent set, which is very effective, as well found at the link below:
 *    here: https://medium.com/bb-tutorials-and-thoughts/250-practice-questions-for-terraform-associate-certification-7a3ccebe6a1a )
 
-
+###
+###
 ###
 
 #### 1. Imagine that there are 20 people in the company who use Terraform that manages resources in AWS or GCP. How can you set up a system that tackles that? What could be the issues that can arise from this?
@@ -27,8 +28,9 @@
 #####           State file overrides can be solved using remote states
 #####           Code overroides can be solved usig git repos and branching strategies.
 
-
-2. There are 5 people in your team that use Terraform. Some time in the last few days, a resource in AWS changed. How can you find out who did this?
+##
+##
+#### 2. There are 5 people in your team that use Terraform. Some time in the last few days, a resource in AWS changed. How can you find out who did this?
 
    Answer: If it was done via Console, Cloudtrail can tell you.
            If it was done via Terraform code, git repo AND AWS Cloudtrail can tell you.
