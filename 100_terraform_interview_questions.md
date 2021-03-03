@@ -76,39 +76,39 @@
 
 ######   Answer: It is NOT safe to store in git repos, because it can hold secrets. Also, it is likely that people will override each other's changes in state.
 
-
+##
 11. If you are tagged to implement Terraform in a team or company where they have never used Terraform, what issues might you solve pre-emptively?
 
    Answers: Set standars and best practices before you start coding. Also, you many want to import existing resources in Terraform before you start.
 
-
+##
 12. You are going to deploy similar resources in Development, Staging and Prod environments. How can you code so that you can deploy to similar Terraform code with repeating your code.
 
    Answer: Hav eno hard-coded variables and use .tfvars file per environment.
 
-
+##
 13. How would you implement a Terraform pipeline?
 
    Answer: In the same folder where I have terraform files, I would have .gitlabci.yml file which will have various stages (e.g. tfsec, tflint, checkov, terraform validate, 
              terrform plan and terarform apply and possibly some testing stages).
 
-
+##
 14. Tell me about a project or task that you did in Terraform?
 
     Answer: Tell your story.
 
-
+##
 15.  How do you import state from GCP or AWS?
 
     Answer: Using terraform import command. Format for each resource type may vary. Once you have successfully imported the state, you can also write terraform code to match
              the state so much your code and state and infrasture are all in sync.
 
-
+##
 16. Is there a tool for looking into many resources (> 100) in GCP or AWS and automatically made Terraform code for them?
 
     Answer: Terraformer, (an open source tool). It is magical.
 
-
+##
 18.  How do you define "backend" in Terraform?
 
     Answer:  This is directly from Hashicorp Web Site:
@@ -126,72 +126,72 @@
                 }
               }
 
-
+##
 19. What is a provider and why do you need it?
 
     Answer: Terraform doesn't directly create resources in the cloud. It interacts with provider (given by AWS, GCP, etc.), which enables communication 
             between Terraform and the cloud provider APIs (AWS, GCP etc.).
 
             Using the same idea, Terraform can also deploy resources in non-cloud applications as long as it has a provider (e.g. Hashicorp Vault) 
-
+##
 20.  Examples of a data resource in AWS?
 
      Answer: AMIs, aws_instance
              Please see:  https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/instance
 
-
+##
 21.  When you run your Terraform code on local, how does it get access to your AWS / GCP account?
 
      Answer: There are couple of ways, but one way is using variables:
 
               AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY 
 
-
+##
 22. Can you mark a variable a "secret" such that it does not show up in logs etc?
 
     Answer: Yes from version 0.14
 
-
+##
 23. You made Terraform state using v 0.13. Can you modify it using version 0.12?
 
    Answer: NO.   But, this is possible from 0.14 and up.
 
-
+##
 24. Can Terraform use Bash environment variables?
 
    Answer: Yes, mostly. 
            Please see here:
            https://stackoverflow.com/questions/53330060/can-terraform-use-bash-environment-variables
 
-
+##
 25. Can a module call another module?
 
    Answer: Yes, it is not recommended
 
-
+##
 26. Why do we need terraform.tfvars file?
 
    Answer: If you do not hard code variables, you can set values in terraform.tfvars files (different values per environment).
            This way, your code doesn't change and you can follow DRY principle.
 
-
+##
 27. If you were to design terraform code for making AWS Security Groups, how would you do it?
 
   Answer: This one is bit complicated because Secuirty Groups are made up of Secrutiy Group Rules. So, there are two ways you can go about this:
           A. Made a module for SG Rules. A template would call that module N times to build a SG.
           B. 0.13 can take .csv file as input. You can use that to build SG as a List of Maps.
 
-
+##
 28. Which folder caches module codes locally?
 
   Answer: .terraform
 
-
+##
 29. What negative impact does it have if you remove .terraform folder?
 
   Answer: None. Terraform will simply download everything when you run terraform init command
 
-
+##
 30. You have the same tf code. WIth the same code, you want to deploy to N environments (states) and be able switch between them. How?
 
   Answer: Use different .tfvars file for each environment
