@@ -4,7 +4,7 @@
 
 ##                                               Mamun Rashid
 
-![](mom.jpg) 
+![](https://twitter.com/mamunr7/photo) 
 
 ###                                          Last Updated: 2021.03.03
 
