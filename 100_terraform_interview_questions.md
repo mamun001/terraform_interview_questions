@@ -31,24 +31,21 @@
 ##
 #### 2. There are 5 people in your team that use Terraform. Some time in the last few days, a resource in AWS changed. How can you find out who did this?
 
-   Answer: If it was done via Console, Cloudtrail can tell you.
-           If it was done via Terraform code, git repo AND AWS Cloudtrail can tell you.
+#####   Answer: If it was done via Console, Cloudtrail can tell you.
+#####           If it was done via Terraform code, git repo AND AWS Cloudtrail can tell you.
 
 
 ##
-##
-3. You made a module. One Terraform code uses that module. But, now, you improved that module, but the "caller" code is not compatible with the new version of the module. 
-   How can you have both versions of the module in use?
+####3. You made a module. One Terraform code uses that module. But, now, you improved that module, but the "caller" code is not compatible with the new version of the module.  How can you have both versions of the module in use?
 
-   Answer: You can have verions on your modules and the caller code can refer to specific version of the module.
+#####   Answer: You can have verions on your modules and the caller code can refer to specific version of the module.
 
 
 ##
-##
-4. You have existing infrastructure in AWS that was NOT made by Terraform. How can you bring that infrastructure in Terraform code's control?
+####4. You have existing infrastructure in AWS that was NOT made by Terraform. How can you bring that infrastructure in Terraform code's control?
 
-   Answer: If you all want is the "state" to be in Terraform, you can use "terraform import" commnad.
-           If you also want terraform code be made, you can either do yourself (until code and state match exactly), or you can use a opensource tool named "Terraformer"
+#####   Answer: If you all want is the "state" to be in Terraform, you can use "terraform import" commnad.
+#####           If you also want terraform code be made, you can either do yourself (until code and state match exactly), or you can use a opensource tool named "Terraformer"
 
 
 5. If N people are using Terraform, How can we make sure people don't bring up resources in AWS/GCP that are too expensive?
