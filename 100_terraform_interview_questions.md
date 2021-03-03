@@ -279,6 +279,7 @@
     }
 
 
+##
 42. How would switch between versions of Terraform?
 
     Answer:
@@ -287,39 +288,39 @@
 
       There are other ways , as well (e.g. using containers and aliases)
 
-
+##
 43. Scenario Question: Your terraform code, state and cloud resources are all sync.
     Now, you run: terraform state rm foo (foo is one of resources). What will happen now,
     if you run "terraform plan" ?
 
     Answer: It will say that , it needs to add the resource "foo"
 
-
+##
 44. What is good command to make your terraform code presentable?
 
     Answer: terraform fmt
 
-
+##
 45. What does terraform init command do?
 
     Answer: Pulls in any refernced modules , among other things.
 
-
+##
 46. Is there a linting tool for Terraform?
 
     Answer: Yes. tflint (open source)
 
-
+##
 47. Is there a tool that can look for security vulnerabilities in your terraform code?
 
     Answer: Yes. tfsec
 
-
+##
 48. Does "providers" have versions too?
 
     Answer: Yes!
 
-
+##
 49. How do you make sure your code is using a particular version of a provider?
 
     Answer: In the provider block, you set the version.
@@ -335,18 +336,20 @@
     }
 
 
+##
 50. How do you upgrade the version or providers and plugins and modules?
 
 
     Answer: terraform init -upgrade
 
-
+##
 51. What is Interpolation ?
 
    Answer: Basically using variables.
            0.12 or below, you can use funny $ { } syntax.
            0.13 or above, much more user-friendly
 
+##
 52. How can you make Lambda functions using Terraform?
 
    Answer:
@@ -354,33 +357,36 @@
        terraform (when terraform apply runs) and terraform apply will also use the zip 
        file to deploy lambda function to AWS.
 
-
+##
 53. If you 10 different .tf files in a folder, in what order does Terraform 
     execute the code?
 
     Answer: Order is irrelevant. Terraform makes map based on all the .tf files and 
             executed based on that plan, not sequentially.
 
-
+##
 54. You have mades changes to your code. You did not run terraform plan. You now run
     terraform apply. What will happen?
 
     Answer: terraform will run terraform plan anyway before running terraform apply
 
+##
 55. Besides terraform.tfvars file, which other files does terraform load for variable values?
 
     Answer: *.auto.tfvars
 
-
+##
 56. You are building ec2 machines via terraform. However, you also have to install 
     software and configurations on these ec2 machines. How can you do this using Terraform?
 
     Answer: There are multiple ways. One way is to use user-data scripts.
 
+##
 57. How to create ssh key using terraform:
 
-  ans:  Terraform can generate SSL/SSH private keys using the tls_private_key
+    Answer:  Terraform can generate SSL/SSH private keys using the tls_private_key
 
+##
 58.  How can you do "if-then-else" logic in Terraform version 0.13 and above?
      
 
@@ -390,62 +396,64 @@
          var.a != "" ? var.a : "default-a"
          If var.a is an empty string then the result is "default-a", but otherwise it is the actual value of var.a.
 
-
+##
 59. What is "Dynamic Block" in Terraform?
 
     Answer: It is kind of like a for loop.
 
 
+##
 60. During terraform plan , a resource is successful  (i.e. there are no issues with terraform plan), 
     but fails during provisioning (i.e. during "apply") , what happens to the resource in terraform state?
 
     Answer: It is marked as "tainted"
 
+##
 61. If a provider needs to download data, in which phase does it happen?
 
     Answer: terraform plan
 
-
+##
 62. In "terraform" block , how to do you make sure that user is using terraform version 0.11 or above?
 
     Answer:
 
     terraform { required_version = "~> 0.11" } 
 
-
+##
 63.  Do Plugins execute as separate processes?
 
      Answer: Yes.
 
-
+##
 64. What is the difference between provideer and a plugin?
 
     Answer: It is kind of same, but not :-)
       Best answer is given here:
       https://stackoverflow.com/questions/63440271/understanding-terraform-provider-and-plugin
 
-
+##
 65. As best practice and code readibility, you should always have ___________ file?
 
     Answer: main.tf  (For the reader of your code, this is the entrypoint)
 
-
+##
 66. You have code for resource A and resource B in your main.tf . However, you do not want resource B created until resource A
     is created.  How do you accomplish this?
 
     Answer: In the block for resource B, add a depends_on parameter.
 
-
+##
 67. Can you use filter inside a data block?
 
     Answer: Yes.
 
-
+##
 68. Which will tell terraform to look for all module source lines and retrieves the module codes and report errors if can't find them ?
 
     Answer: terraform get
 
-
+##
 69. What is a terraform provisioner?
 
     Answer: (straight from Hashicorp documentation):
@@ -453,17 +461,17 @@
       Provisioners are used to execute scripts on a local or remote machine as part of resource creation or destruction. 
       Provisioners can be used to bootstrap a resource, cleanup before destroy, run configuration management, etc. 
 
-
+##
 70. Examples of provisioners:
 
     Answer: local-exec , remote-exec
 
-
+##
 71. What is a null resource?
 
     Answer: It is a thing runs through the resource life-cycle, but actually does nothing.
 
-
+##
 72. If a null resource takes no action, what could possibly a use case for it?
 
     Answer: null resource has a magic parameter called "triggers". Any change in the triggers, makes the null-resource run its resource
@@ -493,7 +501,7 @@
 
             In the above example, any changes to the contents of the Kubernetes config file or Kubernetes YAML will cause the command to rerun.
 
-
+##
 73. You want to run terraform plan. However, you want to point to a non-default state file. How?
 
     Answer: -state=PATH
