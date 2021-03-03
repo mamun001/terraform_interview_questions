@@ -44,25 +44,23 @@
 ##
 #### 4. You have existing infrastructure in AWS that was NOT made by Terraform. How can you bring that infrastructure in Terraform code's control?
 
-#####   Answer: If you all want is the "state" to be in Terraform, you can use "terraform import" commnad.
-#####           If you also want terraform code be made, you can either do yourself (until code and state match exactly), or you can use a opensource tool named "Terraformer"
+######   Answer: If you all want is the "state" to be in Terraform, you can use "terraform import" commnad.
+######           If you also want terraform code be made, you can either do yourself (until code and state match exactly), or you can use a opensource tool named "Terraformer"
 
 ##
 #### 5. If N people are using Terraform, How can we make sure people don't bring up resources in AWS/GCP that are too expensive?
 
-#####   Answer: There is proprietory tool call called Scalr. Or, you can use Terraform Enterprise. There may also be a way using Open Policy Agent. Cloud providers often provide tools for this, as well.
+######   Answer: There is proprietory tool call called Scalr. Or, you can use Terraform Enterprise. There may also be a way using Open Policy Agent. Cloud providers often provide tools for this, as well.
 
+##
+#### 6. How can you tackle secrets in Terraform?
 
-6. How can you tackle secrets in Terraform?
+######   Answer: Starting version 0.14, you can mark your variables "sensitive". This allows logs of these variables to be masked.  You can also integrate Vault with Terraform.
 
-   Answer: Starting version 0.14, you can mark your variables "sensitive". This allows logs of these variables to be masked.
-           You can also integrate Vault with Terraform.
+##
+#### 7. What is the big deal about Terraform v0.13 and above?
 
-
-7. What is the big deal about Terraform v0.13 and above?
-
-   Answer: Before version 0.13, programming logic was nearly impossible to implement in HCL. With 0.13, it is still not super easy, but a huge progress was made.
-           There were many other major features released as well (e.g. json output)
+######   Answer: Before version 0.13, programming logic was nearly impossible to implement in HCL. With 0.13, it is still not super easy, but a huge progress was made.  There were many other major features released as well (e.g. json output)
 
 
 8. You have 2 folders of terraform code. Folder A and Folder B. Folder B needs to use output (state) from folder A to create resources. How can you accomplish this?
