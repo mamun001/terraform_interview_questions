@@ -478,7 +478,9 @@
             cycle again.
 
 
-            Here is example from:  https://blog.logrocket.com/dirty-terraform-hacks/
+            Here is example from:  
+            https://blog.logrocket.com/dirty-terraform-hacks/
+
 
             variable "config_path" {
               description = "path to a kubernetes config file"
