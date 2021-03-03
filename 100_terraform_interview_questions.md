@@ -8,7 +8,7 @@
 
 <img src="https://avatars.githubusercontent.com/u/12315197?s=460&v=4"
      alt="Mamun Rashid"
-     style="float: center; margin-right: 2px;" />
+     style="float: center; margin-right: height 5;" />
 
 ###                                          Last Updated: 2021.03.03
 
