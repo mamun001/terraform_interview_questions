@@ -4,12 +4,6 @@
 
 ##                                               Mamun Rashid
 
-#![](https://twitter.com/mamunr7/photo) 
-
-<img src="https://avatars.githubusercontent.com/u/12315197?s=460&v=4"
-     alt="Mamun Rashid"
-     style="float: center; margin-right: height 5;" />
-
 ###                                          Last Updated: 2021.03.03
 
 ###                                   https://www.linkedin.com/in/mamunrashid/
