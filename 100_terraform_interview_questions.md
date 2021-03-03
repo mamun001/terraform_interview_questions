@@ -7,8 +7,8 @@
 #![](https://twitter.com/mamunr7/photo) 
 
 <img src="https://avatars.githubusercontent.com/u/12315197?s=460&v=4"
-     alt="Markdown Monster icon"
-     style="float: left; margin-right: 10px;" />
+     alt="Mamun Rashid"
+     style="float: center; margin-right: 2px;" />
 
 ###                                          Last Updated: 2021.03.03
 
