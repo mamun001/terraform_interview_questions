@@ -36,22 +36,21 @@
 
 
 ##
-####3. You made a module. One Terraform code uses that module. But, now, you improved that module, but the "caller" code is not compatible with the new version of the module.  How can you have both versions of the module in use?
+#### 3. You made a module. One Terraform code uses that module. But, now, you improved that module, but the "caller" code is not compatible with the new version of the module.  How can you have both versions of the module in use?
 
 #####   Answer: You can have verions on your modules and the caller code can refer to specific version of the module.
 
 
 ##
-####4. You have existing infrastructure in AWS that was NOT made by Terraform. How can you bring that infrastructure in Terraform code's control?
+#### 4. You have existing infrastructure in AWS that was NOT made by Terraform. How can you bring that infrastructure in Terraform code's control?
 
 #####   Answer: If you all want is the "state" to be in Terraform, you can use "terraform import" commnad.
 #####           If you also want terraform code be made, you can either do yourself (until code and state match exactly), or you can use a opensource tool named "Terraformer"
 
+##
+#### 5. If N people are using Terraform, How can we make sure people don't bring up resources in AWS/GCP that are too expensive?
 
-5. If N people are using Terraform, How can we make sure people don't bring up resources in AWS/GCP that are too expensive?
-
-   Answer: There is proprietory tool call called Scalr. Or, you can use Terraform Enterprise. There may also be a way using Open Policy Agent. Cloud providers often
-           provide tools for this, as well.
+#####   Answer: There is proprietory tool call called Scalr. Or, you can use Terraform Enterprise. There may also be a way using Open Policy Agent. Cloud providers often provide tools for this, as well.
 
 
 6. How can you tackle secrets in Terraform?
