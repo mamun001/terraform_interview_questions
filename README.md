@@ -1,5 +1,5 @@
 
-###  101 terraform_interview_questions
+###  101 Terraform Interview Questions
 ##
 ###  Hope you find these helpful.
 ##
