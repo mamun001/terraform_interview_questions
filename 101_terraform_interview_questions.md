@@ -529,78 +529,81 @@
     Answer: terraform console
 
 
+##
 78.  If you want 2 identical aws provider sections, then you have use :
 
      Answer:  alias keyword on the 2nd one.
 
 
+##
 79. Can plugins vary folder by folder?
 
 
     Answer: plugins for each terraform code folder are independent of each other.
 
 
-
+##
 80. You have file foo.tf with 5 resources defined in it. You also bar.tf with another 5 resources defined in it. 
     If you concatenate the 2 files and deleted foo.tf bar.tf files, what would be the impact?
 
     Answer: nothing
 
-
+##
 81. State file is always encrypted at rest. True or False:
 
     Answer: False
 
-
+##
 83. If you have chosen S3 as your backend for state files. What's easiest way to make sure state file(s) are encrypted at rest?
 
 
     Answer: Just make the bucket encrypted
 
-
+##
 84. _________ command creates a visual graph of Terraform resources:
 
 
     Answer: terraform graph
 
-
+##
 85. What allows terraform users to apply policy as code to enforce standardized configurations for resources being deployed?
 
 
     Answer: Sentinel
 
-
+##
 86. When terraform init downloads plugins, where does it save it?
 
 
     Answer: .terraform.d folder
 
-
+##
 87. Where is local copy of the modules saved?
 
 
     Answer: .terraform folder
 
-
+##
 88. Which file keeps a local copy of the "state" (if remote state is not used) ?
 
 
     Answer: terraform.tfstate
 
 
+##
 89. Have you noticed any change with respect to error handling beginning version 0.13?
 
 
     Answer: Yes. It is LOT better. For example, it points to file name and line numbers very accurately (where the problem is). 
             Also, error messages , in general, are significantly clearer.
 
-
+##
 90. Every Terraform resource has a meta-parameter you can use for iteration called _________ .
 
 
     Answer: index
 
-
+##
 91. Scenario Question: You wrote some terraform code. You ran plan and apply and resources got created. Then, you ran terraform destroy and resources got
       destroyed. What happens if you now run "terraform plan" ?
 
@@ -608,18 +611,20 @@
     Answer: It will say that it needs to re-create the same resources again.
 
 
+##
 92. Is Terraform idempotent?
 
 
    Answer: Yes
 
 
+##
 93. What does "root module" mean?
 
 
     Answer: It's the folder that may or may not call other child modules , but no other code calls this folder as a module.
 
-
+##
 94. Why is root module called a "module" when its just a folder?
 
 
@@ -627,18 +632,19 @@
               as if folder A is a module.
 
 
+##
 95.  When you run "terraform plan", if there are no syntax error, you will get what at the bottom of the output?
 
 
      Answer: Number of sources to be created, modified, and destroyed
 
-
+##
 96. Is there way to validate your terraform code syntax, before running terraform plan?
 
 
     Answer: Yes. "terraform validate"
 
-
+##
 97. Is there way to automatically create a Readme.md file based on your terraform code?
 
 
@@ -646,24 +652,26 @@
       terraform-docs is an open source tool. You can find it here:
       https://github.com/terraform-docs/terraform-docs  
     
-
+##
 98. Persistence data stored in state for a particular environment is called?
 
     
     Answer: workspace
 
-
+##
 99. Which workspace do you work in by default?
 
 
     Answer: default
 
 
+##
 100. How do you know which workspaces you have in the first place?
 
 
     Answer: terraform workspace list
 
+##
 101. What if you do not want terraform apply to ask for your permission before deploying resources?
 
     Answer: terraform apply --auto-approve
