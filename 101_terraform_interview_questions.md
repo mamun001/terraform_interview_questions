@@ -105,7 +105,7 @@
 ##
 #### 13. How would you implement a Terraform pipeline?
 
-#####   Answer: In the same folder where I have terraform files, I would have .gitlabci.yml file which will have various stages (e.g. tfsec, tflint, checkov, terraform validate, 
+   Answer: In the same folder where I have terraform files, I would have .gitlabci.yml file which will have various stages (e.g. tfsec, tflint, checkov, terraform validate, 
              terrform plan and terarform apply and possibly some testing stages).
 
 
