@@ -122,12 +122,13 @@
 
 
 ##
-16. Is there a tool for looking into many resources (> 100) in GCP or AWS and automatically made Terraform code for them?
+### 16. Is there a tool for looking into many resources (> 100) in GCP or AWS and automatically made Terraform code for them?
 
     Answer: Terraformer, (an open source tool). It is magical.
 
+
 ##
-17.  How do you define "backend" in Terraform?
+#### 17.  How do you define "backend" in Terraform?
 
     Answer:  This is directly from Hashicorp Web Site:
 
@@ -145,89 +146,100 @@
               }
 
 ##
-18. What is a provider and why do you need it?
+### 18. What is a provider and why do you need it?
 
     Answer: Terraform doesn't directly create resources in the cloud. It interacts with provider (given by AWS, GCP, etc.), which enables communication 
             between Terraform and the cloud provider APIs (AWS, GCP etc.).
 
             Using the same idea, Terraform can also deploy resources in non-cloud applications as long as it has a provider (e.g. Hashicorp Vault) 
+
 ##
-19.  Examples of a data resource in AWS?
+#### 19.  Examples of a data resource in AWS?
 
      Answer: AMIs, aws_instance
              Please see:  https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/instance
 
 ##
-20.  When you run your Terraform code on local, how does it get access to your AWS / GCP account?
+#### 20.  When you run your Terraform code on local, how does it get access to your AWS / GCP account?
 
      Answer: There are couple of ways, but one way is using variables:
 
               AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY 
 
 ##
-21. Can you mark a variable a "secret" such that it does not show up in logs etc?
+#### 21. Can you mark a variable a "secret" such that it does not show up in logs etc?
 
     Answer: Yes from version 0.14
 
 ##
-22. You made Terraform state using v 0.13. Can you modify it using version 0.12?
+#### 22. You made Terraform state using v 0.13. Can you modify it using version 0.12?
 
    Answer: NO.   But, this is possible from 0.14 and up.
 
+
 ##
-23. Can Terraform use Bash environment variables?
+#### 23. Can Terraform use Bash environment variables?
 
    Answer: Yes, mostly. 
            Please see here:
            https://stackoverflow.com/questions/53330060/can-terraform-use-bash-environment-variables
 
+
 ##
-24. Can a module call another module?
+#### 24. Can a module call another module?
 
    Answer: Yes, it is not recommended
 
+
 ##
-25. Why do we need terraform.tfvars file?
+#### 25. Why do we need terraform.tfvars file?
 
    Answer: If you do not hard code variables, you can set values in terraform.tfvars files (different values per environment).
            This way, your code doesn't change and you can follow DRY principle.
 
+
 ##
-26. If you were to design terraform code for making AWS Security Groups, how would you do it?
+#### 26. If you were to design terraform code for making AWS Security Groups, how would you do it?
 
   Answer: This one is bit complicated because Secuirty Groups are made up of Secrutiy Group Rules. So, there are two ways you can go about this:
           A. Made a module for SG Rules. A template would call that module N times to build a SG.
           B. 0.13 can take .csv file as input. You can use that to build SG as a List of Maps.
 
+
 ##
-27. Which folder caches module codes locally?
+#### 27. Which folder caches module codes locally?
 
   Answer: .terraform
 
-##
-28. What negative impact does it have if you remove .terraform folder?
-
-  Answer: None. Terraform will simply download everything when you run terraform init command
 
 ##
-29. You have the same tf code. WIth the same code, you want to deploy to N environments (states) and be able switch between them. How?
+#### 28. What negative impact does it have if you remove .terraform folder?
 
-  Answer: Use different .tfvars file for each environment
+    Answer: None. Terraform will simply download everything when you run terraform init command
+
 
 ##
-30. How can you pass csv an argument to a module?
+#### 29. You have the same tf code. WIth the same code, you want to deploy to N environments (states) and be able switch between them. How?
 
-  Answer:  Use csvdecode function. That will read a csv file into a List of Maps. You can pass that directly to a module that accepts List of Maps (One input Variable)
+     Answer: Use different .tfvars file for each environment
+
+
+
+##
+#### 30. How can you pass csv an argument to a module?
+
+     Answer:  Use csvdecode function. That will read a csv file into a List of Maps. You can pass that directly to a module that accepts List of Maps (One input Variable)
            Please see here for more info on csvdecode:
            https://www.terraform.io/docs/language/functions/csvdecode.html
 
 ##
-31. Does Terraform have built-in functions?
+#### 31. Does Terraform have built-in functions?
 
   Answer: Yes. Many. e.g. csvdecode.
 
+
 ##
-32. What does "terraform refresh do"?
+#### 32. What does "terraform refresh do"?
 
   Answer: terraform refresh reads the local state and goes back to the cloud and finds drift.
           More info here:
