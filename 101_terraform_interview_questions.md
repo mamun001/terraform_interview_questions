@@ -24,7 +24,6 @@
    At least two issues arise when multiple people work on Terraform together touching the same resources:
          1. state file overrides
          2. code overrides
-
          State file overrides can be solved using remote states
          Code overroides can be solved usig git repos and branching strategies.
 
