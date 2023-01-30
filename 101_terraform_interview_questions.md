@@ -248,49 +248,48 @@
 
 
 ##
-33. You have added some new codes in the outputs.tf file (added more things to output). That is the only thing you have added. What command can you now run
+#### 33. You have added some new codes in the outputs.tf file (added more things to output). That is the only thing you have added. What command can you now run
       so that you get to see the results even though no change has happened in any other code or any resources in the cloud?
 
   Answer: terraform refresh
 
-##
-34. What does "terraform taint" do?
-
-  Answer: It artifically marks a resource as "bad". So, next time you run terraform plan, you will try and re-create the resource regardless if the resource has been 
-          modified or not. This is a good way to force immutability.
-
 
 ##
-35. How can you get a list of Terraform resources of a given folder with terraform code?
+#### 34. What does "terraform taint" do?
+
+  Answer: It artifically marks a resource as "bad". So, next time you run terraform plan, you will try and re-create the resource regardless if the resource has been modified or not. This is a good way to force immutability.
+
+
+##
+#### 35. How can you get a list of Terraform resources of a given folder with terraform code?
 
     Answer: terraform state list
 
 
 ##
-36. Can you move terraform state from one place to another?
+### 36. Can you move terraform state from one place to another?
 
     Answer: terraform state mv  ......
 
 ##
-37. Can you remove JUST 1 item from your "state"? How?
+#### 37. Can you remove JUST 1 item from your "state"? How?
 
     Answer: terraform state rm
 
 ##
-38. Using Terraform , you have deployed 6 resources in AWS. However, a developer deleted on of them via AWS Console. Turns out that , that resource was not needed
-     any way. How can you make your terraform code and terraform state sync up now?
+#### 38. Using Terraform , you have deployed 6 resources in AWS. However, a developer deleted on of them via AWS Console. Turns out that , that resource was not needed any way. How can you make your terraform code and terraform state sync up now?
 
     Answer: 1. terraform state rm resource_name &
             2. remove the relevant part of the code that creates the deleted resource
 
 
 ##
-39. Generally speaking, using --auto-approve is bad idea. Can you imagine a situation where , it may ok ?
+#### 39. Generally speaking, using --auto-approve is bad idea. Can you imagine a situation where , it may ok ?
 
     Answer: In development environments
 
 ##
-40. Examples of other data resources that are part of AWS provider:
+#### 40. Examples of other data resources that are part of AWS provider:
 
     Answer:
       "aws_acm_certificate"
@@ -299,7 +298,7 @@
 
 
 ##
-41. How does terraform get access to AWS?
+#### 41. How does terraform get access to AWS?
 
     Answer: Using variable in aws provider section
 
@@ -311,7 +310,7 @@
 
 
 ##
-42. How would switch between versions of Terraform?
+#### 42. How would switch between versions of Terraform?
 
     Answer:
       mac brew install tfenv
@@ -320,39 +319,39 @@
       There are other ways , as well (e.g. using containers and aliases)
 
 ##
-43. Scenario Question: Your terraform code, state and cloud resources are all sync.
+#### 43. Scenario Question: Your terraform code, state and cloud resources are all sync.
     Now, you run: terraform state rm foo (foo is one of resources). What will happen now,
     if you run "terraform plan" ?
 
     Answer: It will say that , it needs to add the resource "foo"
 
 ##
-44. What is good command to make your terraform code presentable?
+#### 44. What is good command to make your terraform code presentable?
 
     Answer: terraform fmt
 
 ##
-45. What does terraform init command do?
+#### 45. What does terraform init command do?
 
     Answer: Pulls in any refernced modules , among other things.
 
 ##
-46. Is there a linting tool for Terraform?
+#### 46. Is there a linting tool for Terraform?
 
     Answer: Yes. tflint (open source)
 
 ##
-47. Is there a tool that can look for security vulnerabilities in your terraform code?
+#### 47. Is there a tool that can look for security vulnerabilities in your terraform code?
 
     Answer: Yes. tfsec
 
 ##
-48. Does "providers" have versions too?
+#### 48. Does "providers" have versions too?
 
     Answer: Yes!
 
 ##
-49. How do you make sure your code is using a particular version of a provider?
+#### 49. How do you make sure your code is using a particular version of a provider?
 
     Answer: In the provider block, you set the version.
 
@@ -368,20 +367,20 @@
 
 
 ##
-50. How do you upgrade the version or providers and plugins and modules?
+#### 50. How do you upgrade the version or providers and plugins and modules?
 
 
     Answer: terraform init -upgrade
 
 ##
-51. What is Interpolation ?
+#### 51. What is Interpolation ?
 
    Answer: Basically using variables.
            0.12 or below, you can use funny $ { } syntax.
            0.13 or above, much more user-friendly
 
 ##
-52. How can you make Lambda functions using Terraform?
+#### 52. How can you make Lambda functions using Terraform?
 
    Answer:
        Lambda codes live in a folder called src and zip file is created on the fly by 
@@ -389,38 +388,37 @@
        file to deploy lambda function to AWS.
 
 ##
-53. If you 10 different .tf files in a folder, in what order does Terraform 
+#### 53. If you 10 different .tf files in a folder, in what order does Terraform 
     execute the code?
 
     Answer: Order is irrelevant. Terraform makes map based on all the .tf files and 
             executed based on that plan, not sequentially.
 
 ##
-54. You have mades changes to your code. You did not run terraform plan. You now run
+#### 54. You have mades changes to your code. You did not run terraform plan. You now run
     terraform apply. What will happen?
 
     Answer: terraform will run terraform plan anyway before running terraform apply
 
 ##
-55. Besides terraform.tfvars file, which other files does terraform load for variable values?
+#### 55. Besides terraform.tfvars file, which other files does terraform load for variable values?
 
     Answer: *.auto.tfvars
 
 ##
-56. You are building ec2 machines via terraform. However, you also have to install 
+#### 56. You are building ec2 machines via terraform. However, you also have to install 
     software and configurations on these ec2 machines. How can you do this using Terraform?
 
     Answer: There are multiple ways. One way is to use user-data scripts.
 
 ##
-57. How to create ssh key using terraform:
+#### 57. How to create ssh key using terraform:
 
     Answer:  Terraform can generate SSL/SSH private keys using the tls_private_key
 
 ##
-58.  How can you do "if-then-else" logic in Terraform version 0.13 and above?
+#### 58.  How can you do "if-then-else" logic in Terraform version 0.13 and above?
      
-
      Answer: (Directly from terraform pages:)
 
       A common use of conditional expressions is to define defaults to replace invalid values:
@@ -428,64 +426,64 @@
          If var.a is an empty string then the result is "default-a", but otherwise it is the actual value of var.a.
 
 ##
-59. What is "Dynamic Block" in Terraform?
+#### 59. What is "Dynamic Block" in Terraform?
 
     Answer: It is kind of like a for loop.
 
 
 ##
-60. During terraform plan , a resource is successful  (i.e. there are no issues with terraform plan), 
+#### 60. During terraform plan , a resource is successful  (i.e. there are no issues with terraform plan), 
     but fails during provisioning (i.e. during "apply") , what happens to the resource in terraform state?
 
     Answer: It is marked as "tainted"
 
 ##
-61. If a provider needs to download data, in which phase does it happen?
+#### 61. If a provider needs to download data, in which phase does it happen?
 
     Answer: terraform plan
 
 ##
-62. In "terraform" block , how to do you make sure that user is using terraform version 0.11 or above?
+#### 62. In "terraform" block , how to do you make sure that user is using terraform version 0.11 or above?
 
     Answer:
 
     terraform { required_version = "~> 0.11" } 
 
 ##
-63.  Do Plugins execute as separate processes?
+#### 63.  Do Plugins execute as separate processes?
 
      Answer: Yes.
 
 ##
-64. What is the difference between provideer and a plugin?
+#### 64. What is the difference between provideer and a plugin?
 
     Answer: It is kind of same, but not :-)
       Best answer is given here:
       https://stackoverflow.com/questions/63440271/understanding-terraform-provider-and-plugin
 
 ##
-65. As best practice and code readibility, you should always have ___________ file?
+#### 65. As best practice and code readibility, you should always have ___________ file?
 
     Answer: main.tf  (For the reader of your code, this is the entrypoint)
 
 ##
-66. You have code for resource A and resource B in your main.tf . However, you do not want resource B created until resource A
+#### 66. You have code for resource A and resource B in your main.tf . However, you do not want resource B created until resource A
     is created.  How do you accomplish this?
 
     Answer: In the block for resource B, add a depends_on parameter.
 
 ##
-67. Can you use filter inside a data block?
+#### 67. Can you use filter inside a data block?
 
     Answer: Yes.
 
 ##
-68. Which will tell terraform to look for all module source lines and retrieves the module codes and report errors if can't find them ?
+#### 68. Which will tell terraform to look for all module source lines and retrieves the module codes and report errors if can't find them ?
 
     Answer: terraform get
 
 ##
-69. What is a terraform provisioner?
+#### 69. What is a terraform provisioner?
 
     Answer: (straight from Hashicorp documentation):
 
@@ -493,17 +491,17 @@
       Provisioners can be used to bootstrap a resource, cleanup before destroy, run configuration management, etc. 
 
 ##
-70. Examples of provisioners:
+#### 70. Examples of provisioners:
 
     Answer: local-exec , remote-exec
 
 ##
-71. What is a null resource?
+#### 71. What is a null resource?
 
     Answer: It is a thing runs through the resource life-cycle, but actually does nothing.
 
 ##
-72. If a null resource takes no action, what could possibly a use case for it?
+#### 72. If a null resource takes no action, what could possibly a use case for it?
 
     Answer: null resource has a magic parameter called "triggers". Any change in the triggers, makes the null-resource run its resource
             cycle again.
@@ -535,109 +533,112 @@
             In the above example, any changes to the contents of the Kubernetes config file or Kubernetes YAML will cause the command to rerun.
 
 ##
-73. You want to run terraform plan. However, you want to point to a non-default state file. How?
+#### 73. You want to run terraform plan. However, you want to point to a non-default state file. How?
 
     Answer: -state=PATH
 
 
 
-74. True or False: Providers and provisioners are both provided via plugins.
+##
+#### 74. True or False: Providers and provisioners are both provided via plugins.
 
     Answer: True
 
 
-75. Can terraform handle map type variable natively?
+##
+##### 75. Can terraform handle map type variable natively?
 
     Answer: Yes
 
 
-76.  A ________ type is a type that groups multiple values into a single value.
+##
+#### 76.  A ________ type is a type that groups multiple values into a single value.
 
 
     Answer: Complex
 
 
-77.  Launch interactive console via which command?
+##
+#### 77.  Launch interactive console via which command?
 
     Answer: terraform console
 
 
 ##
-78.  If you want 2 identical aws provider sections, then you have use :
+#### 78.  If you want 2 identical aws provider sections, then you have use :
 
      Answer:  alias keyword on the 2nd one.
 
 
 ##
-79. Can plugins vary folder by folder?
+##### 79. Can plugins vary folder by folder?
 
 
     Answer: plugins for each terraform code folder are independent of each other.
 
 
 ##
-80. You have file foo.tf with 5 resources defined in it. You also bar.tf with another 5 resources defined in it. 
-    If you concatenate the 2 files and deleted foo.tf bar.tf files, what would be the impact?
+#### 80. You have file foo.tf with 5 resources defined in it. You also bar.tf with another 5 resources defined in it.  If you concatenate the 2 files and deleted foo.tf bar.tf files, what would be the impact?
 
     Answer: nothing
 
 ##
-81. State file is always encrypted at rest. True or False:
+##### 81. State file is always encrypted at rest. True or False:
 
     Answer: False
 
 ##
-83. If you have chosen S3 as your backend for state files. What's easiest way to make sure state file(s) are encrypted at rest?
+#### 83. If you have chosen S3 as your backend for state files. What's easiest way to make sure state file(s) are encrypted at rest?
 
 
     Answer: Just make the bucket encrypted
 
 ##
-84. _________ command creates a visual graph of Terraform resources:
+#### 84. _________ command creates a visual graph of Terraform resources:
 
 
     Answer: terraform graph
 
 ##
-85. What allows terraform users to apply policy as code to enforce standardized configurations for resources being deployed?
+#### 85. What allows terraform users to apply policy as code to enforce standardized configurations for resources being deployed?
 
 
     Answer: Sentinel
 
 ##
-86. When terraform init downloads plugins, where does it save it?
+#### 86. When terraform init downloads plugins, where does it save it?
 
 
     Answer: .terraform.d folder
 
 ##
-87. Where is local copy of the modules saved?
+##### 87. Where is local copy of the modules saved?
 
 
     Answer: .terraform folder
 
 ##
-88. Which file keeps a local copy of the "state" (if remote state is not used) ?
+#### 88. Which file keeps a local copy of the "state" (if remote state is not used) ?
 
 
     Answer: terraform.tfstate
 
 
 ##
-89. Have you noticed any change with respect to error handling beginning version 0.13?
+#### 89. Have you noticed any change with respect to error handling beginning version 0.13?
 
 
     Answer: Yes. It is LOT better. For example, it points to file name and line numbers very accurately (where the problem is). 
             Also, error messages , in general, are significantly clearer.
 
 ##
-90. Every Terraform resource has a meta-parameter you can use for iteration called _________ .
+#### 90. Every Terraform resource has a meta-parameter you can use for iteration called _________ .
 
 
     Answer: index
 
 ##
-91. Scenario Question: You wrote some terraform code. You ran plan and apply and resources got created. Then, you ran terraform destroy and resources got
+#### 91. Scenario Question: You wrote some terraform code. You ran plan and apply and resources got created. Then, you ran terraform destroy and resources got
       destroyed. What happens if you now run "terraform plan" ?
 
 
@@ -645,20 +646,20 @@
 
 
 ##
-92. Is Terraform idempotent?
+##### 92. Is Terraform idempotent?
 
 
    Answer: Yes
 
 
 ##
-93. What does "root module" mean?
+#### 93. What does "root module" mean?
 
 
     Answer: It's the folder that may or may not call other child modules , but no other code calls this folder as a module.
 
 ##
-94. Why is root module called a "module" when its just a folder?
+##### 94. Why is root module called a "module" when its just a folder?
 
 
     Answer: Because, any folder can be used as a child module. For example, if you have codes in folder A, you can call it from folder B,
@@ -666,19 +667,19 @@
 
 
 ##
-95.  When you run "terraform plan", if there are no syntax error, you will get what at the bottom of the output?
+#### 95.  When you run "terraform plan", if there are no syntax error, you will get what at the bottom of the output?
 
 
      Answer: Number of sources to be created, modified, and destroyed
 
 ##
-96. Is there way to validate your terraform code syntax, before running terraform plan?
+#### 96. Is there way to validate your terraform code syntax, before running terraform plan?
 
 
     Answer: Yes. "terraform validate"
 
 ##
-97. Is there way to automatically create a Readme.md file based on your terraform code?
+#### 97. Is there way to automatically create a Readme.md file based on your terraform code?
 
 
     Answer:  terraform-docs markdown . >> README.md
@@ -686,26 +687,26 @@
       https://github.com/terraform-docs/terraform-docs  
     
 ##
-98. Persistence data stored in state for a particular environment is called?
+#### 98. Persistence data stored in state for a particular environment is called?
 
     
     Answer: workspace
 
 ##
-99. Which workspace do you work in by default?
+#### 99. Which workspace do you work in by default?
 
 
     Answer: default
 
 
 ##
-100. How do you know which workspaces you have in the first place?
+#### 100. How do you know which workspaces you have in the first place?
 
 
     Answer: terraform workspace list
 
 ##
-101. What if you do not want terraform apply to ask for your permission before deploying resources?
+#### 101. What if you do not want terraform apply to ask for your permission before deploying resources?
 
     Answer: terraform apply --auto-approve
 
