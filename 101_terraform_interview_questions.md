@@ -109,15 +109,17 @@
 
 
 ##
-14. Tell me about a project or task that you did in Terraform?
+#### 14. Tell me about a project or task that you did in Terraform?
 
     Answer: Tell your story.
 
+
 ##
-15.  How do you import state from GCP or AWS?
+#### 15.  How do you import state from GCP or AWS?
 
     Answer: Using terraform import command. Format for each resource type may vary. Once you have successfully imported the state, you can also write terraform code to match
              the state so much your code and state and infrasture are all in sync.
+
 
 ##
 16. Is there a tool for looking into many resources (> 100) in GCP or AWS and automatically made Terraform code for them?
