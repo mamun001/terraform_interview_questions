@@ -56,30 +56,44 @@
 
 ######   Answer: Starting version 0.14, you can mark your variables "sensitive". This allows logs of these variables to be masked.  You can also integrate Vault with Terraform.
 
+
+
 ##
 #### 7. What is the big deal about Terraform v0.13 and above?
 
 ######   Answer: Before version 0.13, programming logic was nearly impossible to implement in HCL. With 0.13, it is still not super easy, but a huge progress was made.  There were many other major features released as well (e.g. json output)
+
+
 
 ##
 #### 8. You have 2 folders of terraform code. Folder A and Folder B. Folder B needs to use output (state) from folder A to create resources. How can you accomplish this?
 
 ######   Answer: This has been long-standing problem with Terraform. Terragrunt is one way to get this done. Others have implement custom Python scripts that copies states back and forthe between folders.
 
+
+
 ##
 #### 9. Why would you need "data" resources in Terraform?
 
 ######   Answer: To refer to resources that already exists  in AWS. For example, list of AMIs in a region.
+
+
+
 
 ##
 #### 10. Is it safe to store terraform state in a private git repo? Why or why not?
 
 ######   Answer: It is NOT safe to store in git repos, because it can hold secrets. Also, it is likely that people will override each other's changes in state.
 
-##
-11. If you are tagged to implement Terraform in a team or company where they have never used Terraform, what issues might you solve pre-emptively?
 
-   Answers: Set standars and best practices before you start coding. Also, you many want to import existing resources in Terraform before you start.
+
+##
+#### 11. If you are tagged to implement Terraform in a team or company where they have never used Terraform, what issues might you solve pre-emptively?
+
+######   Answers: Set standars and best practices before you start coding. Also, you many want to import existing resources in Terraform before you start.
+
+
+
 
 ##
 12. You are going to deploy similar resources in Development, Staging and Prod environments. How can you code so that you can deploy to similar Terraform code with repeating your code.
